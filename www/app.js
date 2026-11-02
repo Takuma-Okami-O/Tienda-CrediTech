@@ -800,7 +800,7 @@ function vAjustes() {
     <div class="hint small" style="margin-top:8px">Solo el administrador puede cambiar el tema. Todos los equipos de la tienda (empleados incluidos) se actualizan solos al sincronizar.</div>
     <div class="f" style="margin-top:16px"><label class="l">Logo propio (reemplaza al del tema)</label><div class="row"><div class="logo ${!c.logo && themeOf().mark ? 'mark' : ''}" style="width:56px;height:56px;border-radius:14px;font-size:20px">${markHTML()}</div><button class="btn soft sm" data-act="logoPick">${ic('image')} Subir logo</button>${c.logo ? '<button class="btn danger sm" data-act="logoDel">Quitar</button>' : ''}</div></div></div>` : ''}
   <div class="card"><h3>${ic('users')} Mi cuenta</h3>
-    <dl class="kv2" style="margin-bottom:12px"><dt>Nombre</dt><dd>${esc(L.user?.nombre || '')}</dd><dt>Correo</dt><dd>${esc(L.user?.email || '')}</dd><dt>Rol</dt><dd>${owner ? 'Dueño' : 'Empleado'}</dd></dl>
+    <dl class="kv2" style="margin-bottom:12px"><dt>Nombre</dt><dd>${esc(L.user?.nombre || '')}</dd><dt>Correo</dt><dd>${esc(L.user?.email || '')}</dd><dt>Rol</dt><dd>${owner ? 'Administrador' : 'Empleado'}</dd></dl>
     <div class="row"><div class="f"><label class="l">Contraseña actual</label><input class="in" type="password" id="pw-old" autocomplete="current-password"></div><div class="f"><label class="l">Nueva (mín. 8)</label><input class="in" type="password" id="pw-new" autocomplete="new-password"></div></div>
     <div class="row wrap"><button class="btn soft" data-act="pwSave" style="flex:1">${ic('lock')} Cambiar contraseña</button><button class="btn danger" data-act="logout" style="flex:1">Cerrar sesión</button></div></div></div>
   <div>

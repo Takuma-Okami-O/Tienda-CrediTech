@@ -23,11 +23,12 @@ svg.ic{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.9
 .logo img{width:100%;height:100%;object-fit:cover}
 .brand .bn{color:#fff;font-weight:700;font-size:15px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .brand .bs{font-size:11.5px;color:#94a3b8}
-.nav{display:flex;flex-direction:column;gap:3px}
+.nav{display:flex;flex-direction:column;gap:3px;flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.25) transparent}
+.nav::-webkit-scrollbar{width:6px}.nav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.25);border-radius:6px}
 .nav a{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:11px;color:#cbd5e1;font-weight:600;font-size:14.5px;cursor:pointer;text-decoration:none}
 .nav a:hover{background:rgba(255,255,255,.07);color:#fff}
 .nav a.active{background:var(--accent);color:var(--accent-ink)}
-.side .foot{margin-top:auto;font-size:11.5px;color:#64748b;padding:10px}
+.side .foot{flex:none;margin-top:auto;font-size:11.5px;color:#64748b;padding:10px}
 .main{flex:1;min-width:0;display:flex;flex-direction:column;padding-bottom:calc(var(--tab) + 14px + env(safe-area-inset-bottom))}
 .top{position:sticky;top:0;z-index:40;background:rgba(244,245,249,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:center;gap:12px;padding:calc(12px + env(safe-area-inset-top)) 16px 12px;border-bottom:1px solid var(--line)}
 .top .logo{width:34px;height:34px;border-radius:10px;font-size:14px}
