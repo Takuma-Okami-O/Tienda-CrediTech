@@ -1,0 +1,9 @@
+{
+  "appId": "com.creditech.app",
+  "appName": "CrediTech",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  },
+  "backgroundColor": "#16273A"
+}
