@@ -702,7 +702,7 @@ function buildCatalog() {
   const json = JSON.stringify(catalogData()).replace(/</g, '\\u003c').split(String.fromCharCode(8232)).join('').split(String.fromCharCode(8233)).join('');
   return window.CATALOG_TPL.replace('__TITLE__', () => esc(S.config.nombre + ' — Catálogo')).replace(/__INK__/g, inkFor(accent())).replace(/__BG__/g, () => themeOf().bg).replace(/__COLOR__/g, () => accent()).replace('__DATA__', () => json);
 }
-const catBase = () => (window.BIZ && BIZ.catalogBase) || 'https://takuma-okami-o.github.io/Gestor-de-tienda/catalogo.html';
+const catBase = () => (window.BIZ && BIZ.catalogBase) || (/^https?:/i.test(location.href) ? new URL('catalogo.html', location.href).href : 'https://takuma-okami-o.github.io/Tienda-CrediTech/catalogo.html');
 const catalogLink = () => (typeof SB === 'function' && SB() && L.store && L.store.slug) ? catBase() + '?t=' + L.store.slug : '';
 function vCatalogo() {
   const n = S.productos.filter(p => p.catalogo !== false).length, link = catalogLink();
